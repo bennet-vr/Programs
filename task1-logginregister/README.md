@@ -110,26 +110,3 @@ task1-login-registration/
 ├── README.md
 └── server.js              # Express server and authentication API
 ```
-
-## Important security notes
-
-- Passwords are never stored as plain text; bcrypt hashes are saved instead.
-- SQL statements use placeholders to avoid SQL injection through user input.
-- The session cookie is HTTP-only and uses `SameSite=Strict`.
-- Authentication routes have a basic rate limit.
-- For a public production deployment, use HTTPS, a strong unique secret, and review the authentication and deployment configuration for your environment.
-
-## GitHub upload
-
-Create an empty repository on GitHub, then run these commands from this project folder (replace the URL with your own repository URL):
-
-```bash
-git init
-git add .
-git commit -m "Add login and registration application"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/task1-login-registration.git
-git push -u origin main
-```
-
-Do not add your `.env` file or `node_modules` folder to GitHub. The `.gitignore` file already excludes them.
